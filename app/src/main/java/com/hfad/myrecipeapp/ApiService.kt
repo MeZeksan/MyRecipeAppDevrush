@@ -6,7 +6,7 @@ import retrofit2.create
 import retrofit2.http.GET
 
 //создаем соединение с базовым URL и конвертируем его
-private val retrofit = Retrofit.Builder().baseUrl("www.themealdb.com/api/json/v1/1/")
+private val retrofit = Retrofit.Builder().baseUrl("https://www.themealdb.com/api/json/v1/1/")
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 
