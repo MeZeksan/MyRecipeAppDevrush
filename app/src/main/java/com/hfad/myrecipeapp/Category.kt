@@ -7,4 +7,5 @@ data class Category(
     val strCategoryDescription:String
 )
 
+//по сути это весь файл json который мы получили с сервера
 data class CategoriesResponce(val categories:List<Category>)

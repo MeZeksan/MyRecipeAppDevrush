@@ -26,12 +26,14 @@ import coil.compose.rememberAsyncImagePainter
 fun RecipeScreen(
     modifier: Modifier = Modifier
 ){
+    //получаем нашу viewModel, обязательно указываем какую конкретно с помощью :
     val recipeViewModel:MainViewModel = viewModel()
     val viewstate by recipeViewModel.categoriesState
     Box(modifier = Modifier.fillMaxSize()){
+        //viewState помогает понять, загружаются ли категории или нет
         when {
             viewstate.loading ->
-                CircularProgressIndicator(modifier.align(Alignment.Center))
+                CircularProgressIndicator(modifier.align(Alignment.Center)) // кружок загрузки
             viewstate.error != null ->{
                 Text(text = "ERROR OCCURED")
             }
